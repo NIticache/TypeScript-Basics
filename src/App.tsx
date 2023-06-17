@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Test from "./Pages/Test";
 import ToDo from "./Pages/ToDo";
+import Fetch from "./Pages/Fetch";
+
 // import "./App.css";
 
 function App() {
@@ -8,8 +10,9 @@ function App() {
 
 	return (
 		<>
+			<Fetch />
 			{/* <Test /> */}
-			<ToDo />
+			{/* <ToDo /> */}
 		</>
 	);
 }
