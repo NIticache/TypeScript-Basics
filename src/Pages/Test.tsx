@@ -1,15 +1,50 @@
-import React from "react";
-import Calc from "Components/Calc";
+import { Container, Box } from "@mui/material";
+import Calc from "../Components/Calc";
 const Test = () => {
-	const data = {
-		name: "Niti",
-		Grade: "Mass",
-	};
+	const data = [
+		{
+			name: "Niti",
+			course: "M.E",
+			grade: 9,
+			university: "",
+			completed_status: true,
+		},
+		{
+			name: "Niti",
+			course: "M.E",
+			grade: 9,
+			university: "",
+			completed_status: true,
+		},
+		{
+			name: "Niti",
+			course: "M.E",
+			grade: 9,
+			university: "",
+			completed_status: true,
+		},
+		{
+			name: "Niti",
+			course: "M.E",
+			grade: 9,
+			university: "",
+			completed_status: true,
+		},
+	];
 
 	return (
-		<div>
-			<Calc data={data} />
-		</div>
+		<Container>
+			<Box
+				sx={{
+					display: "grid",
+					gap: "10px",
+					gridTemplateColumns: "20% 20%",
+				}}>
+				{data?.map((item) => {
+					return <Calc data={item} />;
+				})}
+			</Box>
+		</Container>
 	);
 };
 
